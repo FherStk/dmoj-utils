@@ -11,7 +11,7 @@ def main():
             setup(row[2], row[3], row[4])
 
 def setup(email, username, password):
-	command = f"from django.contrib.auth.models import User; u = User.objects.get(email='{email}'); u.username = '{username}'; u.set_password('{password}'); u.save()')"
+	command = f"from django.contrib.auth.models import User; u = User.objects.get(email='{email}'); u.username = '{username}'; u.set_password('{password}'); u.save();"
 	os.system(f". {DMOJ_DIR}/dmojsite/bin/activate && echo \"{command}\" | python3 {DMOJ_DIR}/site/manage.py shell")
 
 if __name__ == "__main__":
